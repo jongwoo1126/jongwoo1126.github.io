@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Flutter 설치 및 설정
+title: Flutter 기본 위젯
 date: 2022-05-12
 category: Flutter
 ---
