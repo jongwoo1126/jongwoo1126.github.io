@@ -30,6 +30,8 @@ Flutter 기본을 학습을 위해 유튜버 '코딩 애플'님의 영상을 참
  - chrome, terminal 실행
  - terminal에 flutter doctor 입력
  - flutter doctor를 통해 필요한 프로그램을 설치한다.
+ - 자동완성 기능은 cotrol + spacebar를 이용하면 할 수 있다.     
+ - 안 될 경우 시스템 환경설정 - 키보드 - 단축기 - 입력소스 "이전 입력소스 선택"을 체크 해제한다  
 
 # 프로젝트 생성
 1. New Flutter Project 
