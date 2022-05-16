@@ -1,0 +1,17 @@
+---
+layout: post
+title: Flutter 기본 위젯
+date: 2022-05-12
+category: Flutter
+---
+# Flutter 기본 위젯
+ ![alt text](/public/img/flutterCh01.png)
+1. TEXT : Text('텍스트 입력')
+2. ICON : Icon(icons.아이콘) - 괄호 안에 원하는 아이콘 찾아서 입력
+3. Image
+ - Image('assets/경로')
+ - assets 폴더를 생성.
+ - pubspec.yaml에 flutter: 부분에 assets : (줄바꿈) assets/ 입력
+![alt text](/public/img/assets.png)
+4. Box : 주로 Container 또는 SizeBox 사용
+
