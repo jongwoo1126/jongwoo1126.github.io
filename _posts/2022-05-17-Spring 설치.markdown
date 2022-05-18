@@ -13,7 +13,7 @@ category: SpringBoot
 5. 생성된 sts-4.14.1.RELEASE의 SpringToolSuite4.exe을 바탕화면에 바로가기 생성(선택사항)
 
 # sts4 설정
-## 인코딩 설정
+#### 인코딩 설정
  1. 상단메뉴 > Window > Preferences > General > Content Types > Java Class File 선택                
   - Default encoding : 'UTF-8' 입력 후 Update 클릭                   
  2. 상단메뉴 > Window > Preferences > General > Content Types > Text 선택          
@@ -36,7 +36,7 @@ category: SpringBoot
   - Encoding: ISO 10646/Unicode(UTF-8. 선택 후 Apply 클릭
  11. 최종 마지막 Apply and Close 클릭해서 Preferences 창 닫기
  
-## Web Devloper
+#### Web Devloper
  1. 상단메뉴 > Help > Install New Software
  2. Latest Eclipse Release - https://download.eclipse.org/releases/latest
  3. Web, XML, Java EE and OSGi Enterprise Development 체크
