@@ -1,6 +1,6 @@
 ---
 layout: post
-title: sts4(Spring Tools Suite 4. 설치 및 설정
+title: sts4(Spring Tools Suite 4) 설치 및 설정
 date: 2022-05-17
 category: SpringBoot
 ---
@@ -14,27 +14,27 @@ category: SpringBoot
 
 # sts4 설정
 * 인코딩 설정
- 1. 상단메뉴 > Window > Preferences > General > Content Types > Java Class File 선택
-  - Default encoding : 'UTF-8' 입력 후 Update 클릭
- 2. 상단메뉴 > Window > Preferences > General > Content Types > Text 선택
-  - Default encoding : 'UTF-8' 입력 후 Update 클릭
- 3. 상단메뉴 > Window > Preferences > General > Content Types > Text 하위 > Java Properties File 선택
-  - Default encoding : ISO-8859-1 → UTF-8 수정 후 Updata 클릭
- 4. 상단메뉴 > Window > Preferences > General > Content Types > Text 하위 > Spring Properties File 선택
-  - Default encoding : ISO-8859-1 → UTF-8 수정 후 Updata 클릭
- 5. 상단메뉴 > Window > Preferences > General > Editors > Text Editors > Spelling 선택
-  - Encoding 항목 - Other 체크 - UTF-8 선택 후 Apply 클릭
- 6. 상단메뉴 > Window > Preferences > General > Workspace 선택
-  - Text file encoding 항목 - Other 체크 - UTF-8 선택 후 Apply 클릭
- 7. 상단메뉴 > Window > Preferences > Web > CSS Files 선택
-  - Encoding: ISO 10646/Unicode(UTF-8. 선택 후 Apply 클릭
- 8. 상단메뉴 > Window > Preferences > Web > HTML Files 선택
-  - Encoding: ISO 10646/Unicode(UTF-8. 선택 후 Apply 클릭
- 9. 상단메뉴 > Window > Preferences > Web > JSP Files 선택
-  - Encoding: ISO 10646/Unicode(UTF-8. 선택 후 Apply 클릭
- 10. 상단메뉴 > Window > Preferences > XML > XML Files 선택
-  - Encoding: ISO 10646/Unicode(UTF-8. 선택 후 Apply 클릭
- 11. 최종 마지막 Apply and Close 클릭해서 Preferences 창 닫기
+ - 상단메뉴 > Window > Preferences > General > Content Types > Java Class File 선택                
+  + Default encoding : 'UTF-8' 입력 후 Update 클릭                   
+ - 상단메뉴 > Window > Preferences > General > Content Types > Text 선택          
+  + Default encoding : 'UTF-8' 입력 후 Update 클릭                
+ - 상단메뉴 > Window > Preferences > General > Content Types > Text 하위 > Java Properties File 선택                    
+  + Default encoding : ISO-8859-1 → UTF-8 수정 후 Updata 클릭               
+4. 상단메뉴 > Window > Preferences > General > Content Types > Text 하위 > Spring Properties File 선택             
+ - Default encoding : ISO-8859-1 → UTF-8 수정 후 Updata 클릭           
+5. 상단메뉴 > Window > Preferences > General > Editors > Text Editors > Spelling 선택
+ - Encoding 항목 - Other 체크 - UTF-8 선택 후 Apply 클릭
+6. 상단메뉴 > Window > Preferences > General > Workspace 선택
+ - Text file encoding 항목 - Other 체크 - UTF-8 선택 후 Apply 클릭
+7. 상단메뉴 > Window > Preferences > Web > CSS Files 선택
+ - Encoding: ISO 10646/Unicode(UTF-8. 선택 후 Apply 클릭
+8. 상단메뉴 > Window > Preferences > Web > HTML Files 선택
+ - Encoding: ISO 10646/Unicode(UTF-8. 선택 후 Apply 클릭
+9. 상단메뉴 > Window > Preferences > Web > JSP Files 선택
+ - Encoding: ISO 10646/Unicode(UTF-8. 선택 후 Apply 클릭
+10. 상단메뉴 > Window > Preferences > XML > XML Files 선택
+ - Encoding: ISO 10646/Unicode(UTF-8. 선택 후 Apply 클릭
+11. 최종 마지막 Apply and Close 클릭해서 Preferences 창 닫기
  
 * Web Devloper
  1. 상단메뉴 > Help > Install New Software
