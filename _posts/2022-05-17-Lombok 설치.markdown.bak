@@ -9,7 +9,7 @@ category: SpringBoot
  - 최신버전 다운로드
 2. Lombok이 있는 폴더에서 git bash 실행
  - java -jar Lombok.jar
-3. install                
+3. install
  ![alt text](/public/img/lombok.png)
  - IDEs에 설치하고자하는 IDE 선택 후 install
  - IDE가 없을시 Specify location... 클릭하여 원하는 IDE 경로 선택
