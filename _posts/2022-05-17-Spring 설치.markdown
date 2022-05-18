@@ -51,4 +51,4 @@ category: SpringBoot
  2. Latest Eclipse Release - https://download.eclipse.org/releases/latest
  3. Web, XML, Java EE and OSGi Enterprise Development 체크
  4.설치 항목 확인 및 동의 체크하고 Finish 클릭
- 5. 설치 완료 후 STS4 재시작(Restart Now.
+ 5. 설치 완료 후 STS4 재시작(Restart Now).
