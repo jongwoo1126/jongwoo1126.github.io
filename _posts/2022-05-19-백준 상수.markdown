@@ -11,7 +11,7 @@ category: BaeckJoon
 두 수를 입력했을때 상수의 대답을 출력하는 프로그램을 작성해라.       
 
 ### 코드
-'''
+```
 A, B = input().split()
 A = int(A[::-1])
 B = int(B[::-1])
@@ -20,4 +20,4 @@ if A > B:
     print(A)
 else:
     print(B)
-'''
+```
