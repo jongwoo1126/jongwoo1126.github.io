@@ -13,21 +13,21 @@ category: BaeckJoon
 3개의 주사위의 나온 눈이 주어질때, 상금을 계산하는 프로그램을 작성하시오.
 #### 코드
 ```python
-# 주사위 눈 a, b, c
+// 주사위 눈 a, b, c
 a, b, c = map(int, input().split())
 
-# 주사위 눈이 모두 같을때
+// 주사위 눈이 모두 같을때
 if a == b ==c:
    print(10000 + a * 1000)
 
-# 두개의 주사위 눈이 같을떄
+// 두개의 주사위 눈이 같을떄
 elif a==b or b==c:
    print(1000 + b * 100)
 
 elif a==c:
    print(1000 + a * 100)
 
-# 주사위 눈이 모두 다를때
+// 주사위 눈이 모두 다를때
 else:
    print(max(a, b, c) * 100)
 ```
