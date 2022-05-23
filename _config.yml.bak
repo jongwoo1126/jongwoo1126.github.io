@@ -20,10 +20,10 @@
 
 title: Bite's
 email: qkrwhddn96@naver.com
-description: >-  this means to ignore newlines until "baseurl:"
+description: >- # this means to ignore newlines until "baseurl:"
   Themed by ejjoo
- baseurl: "/" # the subpath of your site, e.g. /blog
- url: "http://jongwoo1126.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: "/" # the subpath of your site, e.g. /blog
+# url: "http://jongwoo1126.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: jongwoo1126
 highlighter: rouge
 svg:
