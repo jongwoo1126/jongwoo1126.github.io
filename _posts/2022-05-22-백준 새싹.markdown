@@ -9,7 +9,7 @@ category: BaeckJoon
 ![alt text](/public/img/새싹.png)      
 다음과 같은 새싹을 출력하시오.            
 
-### 코드
+#### 코드
 ```python
 def leaf():
    print('         ,r\'\"7')
