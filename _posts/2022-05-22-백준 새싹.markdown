@@ -4,7 +4,7 @@ title: 백준 25083번 새싹
 date: 2022-05-22
 category: BaeckJoon
 ---
-# 백준 25083번 상수
+# 백준 25083번 새싹
 #### 문제
 ![alt text](/public/img/새싹.png)      
 다음과 같은 새싹을 출력하시오.            
