@@ -6,7 +6,7 @@ category: chatting
 ---
 # Mac M1 Putty
 
-#### 사전 준비 및 Putty 설치
+### 사전 준비 및 Putty 설치
 Putty를 설치하기전 HomeBrew, x-code, command line tools를 설치해야한다.             
 HomeBrew와 x-code는 이미 설치되어 있고, command line tools만 설치하면 된다.               
 command line tools 설치를 위해 아래 명령어를 터미널에 입력한다.          
@@ -25,7 +25,7 @@ brew install putty
 ```
 putty를 설치해도 바로 사용 불가능하여 아래 두가지를 추가로 설치해야한다.
 
-#### macport 설치
+### macport 설치
 https://www.macports.org/install.php 에서 MacOS에 맞는 버전을 설치한다.            
 ```
 export PATH=$PATH:/opt/local/bin
