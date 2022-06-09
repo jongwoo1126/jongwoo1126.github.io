@@ -1,0 +1,33 @@
+---
+layout: post
+title: 백준 1978번 소수찾기
+date: 2022-06-09
+category: BaeckJoon
+---
+# 백준 1978번 소수찾기
+#### 문제
+주어진 수 N개 중에서 소수가 몇 개인지 찾아서 출력하는 프로그램을 작성하시오.       
+                  
+#### 코드
+```python           
+a = int(input())
+list = list(map(int, input().split()))
+count = 0
+
+for i in list:
+    for j in range(2, i+1):
+        if i % j == 0:
+            if i == j:
+                count += 1
+
+            break
+
+print(count)
+```
+
+#### 해설
+list의 갯수 a와 list를 input하고 count를 정의한다.         
+소수는 1보다 큰 자연수 중 1과 자신만을 약수로 가지는 수이다.         
+그러므로 list의 숫자 i를 2부터 i까지 숫자인 j를 나눴을때 나머지가 0이고, i와 j가 같다는 조건이 성립해야한다.           
+위 조건이 성립하면 소수이기 때문에 count를 1더해준다.       
+마지막으로 소수 갯수 count를 출력한다.     
