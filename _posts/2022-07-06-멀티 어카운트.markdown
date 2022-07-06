@@ -1,0 +1,31 @@
+---
+layout: post
+title: GitHub 멀티 어카운트 생성
+date: 2022-07-06
+category: GitHub
+---
+# GitHub 멀티 어카운트 설정
+멀티 어카운트를 위해 여러 글과 유튜버 "Ruby Kim"님의 영상을 참고했다.
+1. cd ~/.ssh
+- .ssh로 이동
+2. ssh-keygen -t rsa -C email주소 -f 파일명
+- 원하는 계정당 하나의 ssh key 생성. 입력 후 엔터
+3. vi config
+```
+HOST github.com-파일명
+    HostName github.com
+    User email주소
+    IdentityFile ssh파일경로
+```
+4. ssh-add 파일명
+- 에러시 eval $(ssh-agent)
+5. github - 프로필 클릭 - settings - SSH - New SSH
+- title : 아무거나
+- key : cat 파일명.pub => 마지막이 세팅한 이메일인지 확인 후 Add SSH
+6. git clone git@github.com-파일명:user/Html.git
+- yes 입력후 세팅 완료
+7. 사용자 설정
+``` 
+git config --local user.name 사용자명
+git config --local user.email email주소
+```
