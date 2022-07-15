@@ -1,0 +1,31 @@
+---
+layout: post
+title: React 시작
+date: 2022-07-15
+category: React
+---
+# React 시작
+1. HomeBrew 설치
+- 이미 설치 되어있고 에러와 관련 게시글이 있어 스킵한다.
+
+2. node.js 설치
+```
+brew install node
+```
+- 위 명령어를 통해 설치한다.     
+
+
+```
+node -v
+npm -v
+npx -v
+```
+- 위 명령어를 통해 설치 되었는지 확인한다.    
+
+3. React 사용
+```
+npx create-react-app 앱이름
+cd 경로
+npm start
+```
+- 위 명령어를 통해 앱을 생성 하고 실행한다.
