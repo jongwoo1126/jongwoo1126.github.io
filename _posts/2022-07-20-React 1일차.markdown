@@ -8,41 +8,11 @@ category: React
 - 이번 리액트 공부는 노마드코더의 'ReactJS로 영화 웹 서비스 만들기'를 통해 진행했다.
 - 리액트와 JS의 차이를 알기위해 먼저 JS로 click 버튼을 누르면 숫자가 1씩 증가하게 코딩을 진행했다.
 1. vanila.js             
-![vanila](../public/img/vanila.png)
+![vanila](/public/img/vanila.png)
 - JS로 코딩을 진행했을때 span, button의 태그를 먼저 생성하고 script를 통해 기능을 구현했다. 
 
 2. index.js
-```
-<!DOCTYPE html>
-<html lang="en">
-    <body>
-        <div id="root"></div>
-    </body>
-    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script>
-        const root = document.getElementById("root");
-        const h3 = React.createElement(
-            "h3", 
-            {
-                id: "title", 
-                style : {color:"red"}, 
-                onMouseEnter: ()=> console.log("mouse enter")
-            }, 
-            "Hello I'm a span"
-        ); 
-        const btn = React.createElement(
-            "button", 
-            {
-                onClick: () => console.log("i'm clicked"),
-                style : {backgroundColor : "tomato"}
-            }, 
-            "Click me");
-        const container = React.createElement("div", null, [h3, btn])
-        ReactDOM.render(container, root);    
-    </script>
-</html>
-```
+![index](/public/img/index.png)
 - React를 이용하여 코딩했을때 react와 react-dom을 먼저 불러온다.
 - 그 후 createElement를 이용하여 원하는 태그를 생성한다.
 
@@ -73,42 +43,7 @@ ReactDOM.render(container, root);
 - 위의 코드는 container를 id가 root인 div 안에 위치시킨다.
 
 3. jsx.js         
-```            
-<!DOCTYPE html>
-<html lang="en">
-    <body>
-        <div id="root"></div>
-    </body>
-    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="text/babel">
-        const root = document.getElementById("root");
-        const Title = () => (
-            <h3 id ="title" onMouseEnter={() => console.log("mouse enter")}>
-                Hello I'm a Title
-            </h3>
-        );
-        const Button = () => (
-            <button 
-                style = {{
-                    backgroundColor: "tomato",
-                }} 
-                onClick = {() => console.log("i'm clicked")}
-            >
-                Click me
-            </button>
-        );
-        const Container = (
-            <div>
-                <Title /> 
-                <Button />
-            </div>
-        );
-        ReactDOM.render(Container, root)
-    </script>
-</html>
-```
+![jsx](/public/img/jsx.png)
 - index.js를 jsx를 사용하여 동일하게 구현했다.
 - jsx를 사용하면 index.js에서 표현한 방법처럼 변환해주는 과정이 필요하다.
 - 변환을 위해 babel을 적용하고 script type에 text/babel을 추가한다.
