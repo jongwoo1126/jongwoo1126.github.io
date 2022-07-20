@@ -1,0 +1,156 @@
+---
+layout: post
+title: React 1일차
+date: 2022-07-20
+category: React
+---
+# React 1일차
+- 이번 리액트 공부는 노마드코더의 'ReactJS로 영화 웹 서비스 만들기'를 통해 진행했다.
+- 리액트와 JS의 차이를 알기위해 먼저 JS로 click 버튼을 누르면 숫자가 1씩 증가하게 코딩을 진행했다.
+1. vanila.js
+```
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <span>Total clicks : 0</span>
+        <button id="btn">Click me</button>
+    </body>
+    <script>
+        let counter = 0;
+        
+        const button = document.getElementById("btn");
+        const span = document.querySelector("span");
+
+        function handleClick() {
+            //console.log("i have been clicked");
+            counter = counter + 1;
+            span.innerText = `Total clicks : ${counter}`;
+        }
+
+        button.addEventListener("click", handleClick);
+    </script>
+</html>
+```
+- JS로 코딩을 진행했을때 span, button의 태그를 먼저 생성하고 script를 통해 기능을 구현했다. 
+
+2. index.js
+```
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div id="root"></div>
+    </body>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script>
+        const root = document.getElementById("root");
+        const h3 = React.createElement(
+            "h3", 
+            {
+                id: "title", 
+                style : {color:"red"}, 
+                onMouseEnter: ()=> console.log("mouse enter")
+            }, 
+            "Hello I'm a span"
+        ); 
+        const btn = React.createElement(
+            "button", 
+            {
+                onClick: () => console.log("i'm clicked"),
+                style : {backgroundColor : "tomato"}
+            }, 
+            "Click me");
+        const container = React.createElement("div", null, [h3, btn])
+        ReactDOM.render(container, root);    
+    </script>
+</html>
+```
+- React를 이용하여 코딩했을때 react와 react-dom을 먼저 불러온다.
+- 그 후 createElement를 이용하여 원하는 태그를 생성한다.
+
+```
+const h3 = React.createElement(
+    "h3", 
+    {
+        id: "title", 
+        style : {color:"red"}, 
+        onMouseEnter: ()=> console.log("mouse enter")
+    }, 
+    "Hello I'm a span"
+); 
+```
+- 위의 h3 태그처럼 처음에 생성하고자 하는 태그를 입력한다.
+- 다음으로는 원하는 속성을 입력한다.
+- 마지막으로 태그에 입력하고자 하는 내용을 입력하면 원하는 태그가 생성된다.
+
+```
+const container = React.createElement("div", null, [h3, btn])
+```
+- container 안의 []는 2개이상의 태그를 ReactDOM에 사용하기 위해 쓰인다.
+
+```
+ReactDOM.render(container, root);   
+```
+- ReactDOM은 생성한 태그를 원하는 위치에 위치시키기 위해 사용된다.
+- 위의 코드는 container를 id가 root인 div 안에 위치시킨다.
+
+3. jsx.js
+```
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div id="root"></div>
+    </body>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const root = document.getElementById("root");
+        const Title = () => (
+            <h3 id ="title" onMouseEnter={() => console.log("mouse enter")}>
+                Hello I'm a Title
+            </h3>
+        );
+        const Button = () => (
+            <button 
+                style = {{
+                    backgroundColor: "tomato",
+                }} 
+                onClick = {() => console.log("i'm clicked")}
+            >
+                Click me
+            </button>
+        );
+        const Container = (
+            <div>
+                <Title /> 
+                <Button />
+            </div>
+        );
+        ReactDOM.render(Container, root)
+    </script>
+</html>
+```
+- index.js를 jsx를 사용하여 동일하게 구현했다.
+- jsx를 사용하면 index.js에서 표현한 방법처럼 변환해주는 과정이 필요하다.
+- 변환을 위해 babel을 적용하고 script type에 text/babel을 추가한다.
+
+```
+const Title = () => (
+    <h3 id ="title" onMouseEnter={() => console.log("mouse enter")}>
+        Hello I'm a Title
+    </h3>
+);
+```
+- jsx는 위와 같이 표현된다.
+- 기존 html 문서에서의 태그 작성과 유사하다.
+
+```
+const Container = (
+    <div>
+        <Title /> 
+        <Button />
+    </div>
+);
+```
+- jsx에서는 두개 이상의 태그를 사용하고 싶을때 []를 사용하지 않고 위처럼 적용시킨다.
