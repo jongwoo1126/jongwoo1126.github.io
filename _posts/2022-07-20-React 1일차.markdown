@@ -8,26 +8,7 @@ category: React
 - 이번 리액트 공부는 노마드코더의 'ReactJS로 영화 웹 서비스 만들기'를 통해 진행했다.
 - 리액트와 JS의 차이를 알기위해 먼저 JS로 click 버튼을 누르면 숫자가 1씩 증가하게 코딩을 진행했다.
 1. vanila.js             
-```        
-<body>
-    <span>Total clicks : 0</span>
-    <button id="btn">Click me</button>
-</body>
-<script>
-    let counter = 0;
-    
-    const button = document.getElementById("btn");
-    const span = document.querySelector("span");
-
-    function handleClick() {
-        //console.log("i have been clicked");
-        counter = counter + 1;
-        span.innerText = `Total clicks : ${counter}`;
-    }
-
-    button.addEventListener("click", handleClick);
-</script>
-```
+![vanila](../public/img/vanila.png)
 - JS로 코딩을 진행했을때 span, button의 태그를 먼저 생성하고 script를 통해 기능을 구현했다. 
 
 2. index.js
