@@ -8,7 +8,7 @@ category: React
 - 이번 리액트 공부는 노마드코더의 'ReactJS로 영화 웹 서비스 만들기'를 통해 진행했다.
 - 리액트와 JS의 차이를 알기위해 먼저 JS로 click 버튼을 누르면 숫자가 1씩 증가하게 코딩을 진행했다.
 1. vanila.js             
-```html
+```html          
 <!DOCTYPE html>
 <html lang="en">
     <body>
@@ -94,8 +94,8 @@ ReactDOM.render(container, root);
 - ReactDOM은 생성한 태그를 원하는 위치에 위치시키기 위해 사용된다.
 - 위의 코드는 container를 id가 root인 div 안에 위치시킨다.
 
-3. jsx.js
-```html
+3. jsx.js         
+```html             
 <!DOCTYPE html>
 <html lang="en">
     <body>
