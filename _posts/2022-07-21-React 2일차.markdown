@@ -1,0 +1,22 @@
+---
+layout: post
+title: React 2일차
+date: 2022-07-21
+category: React
+---
+# React 1일차
+- 이번 리액트 공부는 노마드코더의 'ReactJS로 영화 웹 서비스 만들기'를 통해 진행했다.
+- React로 click 버튼을 누르면 숫자가 1씩 증가하게 코딩을 진행했다.
+1. state1.html             
+![vanila](/public/img/state1.png)
+- useState 기능은 사용하지 않고 버튼을 누르면 숫자가 증가하는 기능을 구현하였다.
+- 버튼을 클릭하면 countUp 함수를 통해 counter가 1증가한다.
+- 여기서 render 함수를 사용하지 않으면 웹에서 counter는 증가하지 않고 console에서만 증가한다.
+- counter가 증가한 모습을 웹에 보여주기 위해 render 함수로 reRender를 진행한다.  
+
+2. state2.html
+![index](/public/img/state2.png)
+- state1과는 다르게 useState를 사용한다.
+- useState 앞의 [counter, setCounter]는 각각 value와 modifier를 나타낸다.
+- value는 값을 저장하는 변수, modifier를 통해 값을 변경하고 값이 변경되면 자동으로 reRender를 진행한다.
+- 자동으로 reRender를 진행하기에 state1처럼 render 함수를 정의할 필요가 없다.
