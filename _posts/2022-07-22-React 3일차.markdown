@@ -1,0 +1,63 @@
+---
+layout: post
+title: React 2일차
+date: 2022-07-21
+category: React
+---
+# React 1일차
+- 이번 리액트 공부는 노마드코더의 'ReactJS로 영화 웹 서비스 만들기'를 통해 진행했다.
+- state를 이용해 분을 입력하면 시간으로 변환하는 기능, 시간을 입력하면 분으로 변환하는 기능을 구현했다.
+1. state3.html             
+```
+const root = document.getElementById("root");
+
+function App() {
+    const [amount, setAmount] = React.useState();
+    const [flipped, setFlipped] = React.useState(false);
+    const onChange = (event) => {
+        //console.log(event.target.value);
+        setAmount(event.target.value);
+    };
+    const reset = () => setAmount(0);
+    const onFlip = () => {
+        reset();
+        setFlipped((current)=>!current);
+    }
+    
+    return (
+        <div>
+            <h1 className="hi">Super Converter</h1>
+
+            <div>
+                <label htmlFor="minutes"> Minutes</label>
+                <input
+                    value={flipped ? (amount * 60) : amount}
+                    id="minutes" 
+                    placeholder="Minutes" 
+                    type="number" 
+                    onChange={onChange}
+                    disabled={flipped === true}
+                />
+            </div>
+
+            <div>
+                <label htmlFor="hours">Hours</label>
+                <input
+                    value={flipped ? amount : Math.round(amount / 60)} 
+                    id="hours" 
+                    placeholder="Hours" 
+                    type="number"
+                    onChange={onChange}
+                    disabled={flipped === false}
+                />
+            </div>
+            
+            <button onClick={reset}>Reset</button>
+            <button onClick={onFlip}>Flip</button>
+        </div>
+        
+    );
+}
+
+ReactDOM.render(<App />, root);
+```
