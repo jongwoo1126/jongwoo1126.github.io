@@ -8,23 +8,23 @@ category: React
 - 이번 리액트 공부는 노마드코더의 'ReactJS로 영화 웹 서비스 만들기'를 통해 진행했다.
 - state를 이용해 분을 입력하면 시간으로 변환하는 기능, 시간을 입력하면 분으로 변환하는 기능을 구현했다.
 - state3.html             
-```
-const root = document.getElementById("root");
 
-function App() {
-    const [amount, setAmount] = React.useState();
-    const [flipped, setFlipped] = React.useState(false);
-    const onChange = (event) => {
-        //console.log(event.target.value);
-        setAmount(event.target.value);
-    };
-    const reset = () => setAmount(0);
-    const onFlip = () => {
-        reset();
-        setFlipped((current)=>!current);
-    }
+const root = document.getElementById("root");         
+
+function App() {           
+    const [amount, setAmount] = React.useState();         
+    const [flipped, setFlipped] = React.useState(false);        
+    const onChange = (event) => {         
+        //console.log(event.target.value);         
+        setAmount(event.target.value);          
+    };          
+    const reset = () => setAmount(0);         
+    const onFlip = () => {        
+        reset();         
+        setFlipped((current)=>!current);       
+    }          
     
-    return (
+    return (       
         <div>
             <h1 className="hi">Super Converter</h1>
 
@@ -60,5 +60,5 @@ function App() {
 }
 
 ReactDOM.render(<App />, root);
-```
+
 - 위 코든 html의 script부분만 가져온것이다.
