@@ -9,6 +9,7 @@ category: React
 - state를 이용해 분을 입력하면 시간으로 변환하는 기능, 시간을 입력하면 분으로 변환하는 기능을 구현했다.
 - state3.html             
 
+```
 const root = document.getElementById("root");         
 
 function App() {           
@@ -60,5 +61,7 @@ function App() {
 }
 
 ReactDOM.render(<App />, root);
+
+```
 
 - 위 코든 html의 script부분만 가져온것이다.
