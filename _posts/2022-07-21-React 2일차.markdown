@@ -4,7 +4,7 @@ title: React 2일차
 date: 2022-07-21
 category: React
 ---
-# React 1일차
+# React 2일차
 - 이번 리액트 공부는 노마드코더의 'ReactJS로 영화 웹 서비스 만들기'를 통해 진행했다.
 - React로 click 버튼을 누르면 숫자가 1씩 증가하게 코딩을 진행했다.
 1. state1.html             

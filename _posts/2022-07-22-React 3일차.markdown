@@ -1,10 +1,10 @@
 ---
 layout: post
-title: React 2일차
-date: 2022-07-21
+title: React 3일차
+date: 2022-07-22
 category: React
 ---
-# React 1일차
+# React 3일차
 - 이번 리액트 공부는 노마드코더의 'ReactJS로 영화 웹 서비스 만들기'를 통해 진행했다.
 - state를 이용해 분을 입력하면 시간으로 변환하는 기능, 시간을 입력하면 분으로 변환하는 기능을 구현했다.
 - state3.html             
