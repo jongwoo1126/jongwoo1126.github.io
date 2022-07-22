@@ -64,4 +64,15 @@ ReactDOM.render(<App />, root);
 
 ```
 
-- 위 코든 html의 script부분만 가져온것이다.
+- 위 코드는 html의 script부분만 가져온것이다.
+- 2일차에 이어 useState를 사용해서 기능을 구현한다.
+- onChange는 변화를 감지하여 변화된 value 값을 amount에 저장한다.
+- reset은 setAmount(0)을 이용해 amount를 0으로 만든다.
+- onFlip은 사용하게 되면 amount를 reset 시키고 !current를 실행한다.
+- flipped의 기본은 false이기때문에 onFlip을 하면 true가 된다.
+- h1 태그 안의 className과 label 안의 htmlFor는 JSX에서만 사용된다.
+- onFlip 버튼을 누르게 되면 flipped가 true가 되고 minutes만 disabled가 되고 시간을 입력할 수 있다.
+- 이때 시간을 입력하면 분에는 입력한 시간에 60을 곱하여 분으로 환산한다.
+- onFlip을 한번 더 하게 되면 분,시간의 값이 0이 되고 minutes에 값을 입력 가능하고 시간이 disabled된다.
+- 이때 시간에는 입력한 분에 나누기 60이 되어 표현된다.
+- 60을 나누게 되면 소숫점이 나올 수 있기때문에 round를 이용해 반올림을 하여 정수로 표시한다.   
