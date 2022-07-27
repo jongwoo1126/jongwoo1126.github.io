@@ -1,0 +1,227 @@
+---
+layout: post
+title: React 4일차
+date: 2022-07-27
+category: React
+---
+# React 4일차
+- 이번 리액트 공부는 노마드코더의 'ReactJS로 영화 웹 서비스 만들기'를 통해 진행했다.
+- 기존 state3.html에서 km to miles 기능과 기능을 선택 안했을시 화면을 추가했다.
+- props의 memo, style 추가, PropTypes를 사용했다.             
+
+state3.html
+
+```
+<script type="text/babel">
+    const root = document.getElementById("root");
+
+    function MinutesToHours() {
+        const [amount, setAmount] = React.useState();
+        const [flipped, setFlipped] = React.useState(false);
+        const onChange = (event) => {
+            //console.log(event.target.value);
+            setAmount(event.target.value);
+        };
+        const reset = () => setAmount(0);
+        const onFlip = () => {
+            reset();
+            setFlipped((current)=>!current);
+        }
+        
+        return (
+            <div>
+                <div>
+                    <label htmlFor="minutes"> Minutes</label>
+                    <input
+                        value={flipped ? (amount * 60) : amount}
+                        id="minutes" 
+                        placeholder="Minutes" 
+                        type="number" 
+                        onChange={onChange}
+                        disabled={flipped === true}
+                    />
+                </div>
+
+                <div>
+                    <label htmlFor="hours">Hours</label>
+                    <input
+                        value={flipped ? amount : Math.round(amount / 60)} 
+                        id="hours" 
+                        placeholder="Hours" 
+                        type="number"
+                        onChange={onChange}
+                        disabled={flipped === false}
+                    />
+                </div>
+                
+                <button onClick={reset}>Reset</button>
+                <button onClick={onFlip}>Flip</button>
+            </div>
+            
+        );
+    }
+
+    function KmToMiles() {
+        const [amount, setAmount] = React.useState();
+        const [flipped, setFlipped] = React.useState(false);
+        const onChange = (event) => {
+            //console.log(event.target.value);
+            setAmount(event.target.value);
+        };
+        const reset = () => setAmount(0);
+        const onFlip = () => {
+            reset();
+            setFlipped((current)=>!current);
+        }
+        
+        return (
+            <div>
+                <div>
+                    <label htmlFor="km"> Km</label>
+                    <input
+                        value={flipped ? Math.round(amount * 1.609344 * 1000000) / 1000000 : amount}
+                        id="km" 
+                        placeholder="Km" 
+                        type="number" 
+                        onChange={onChange}
+                        disabled={flipped === true}
+                    />
+                </div>
+
+                <div>
+                    <label htmlFor="miles">Miles</label>
+                    <input
+                        value={flipped ? amount : Math.round(amount / 1.609344 * 1000000) / 1000000} 
+                        id="miles" 
+                        placeholder="Miles" 
+                        type="number"
+                        onChange={onChange}
+                        disabled={flipped === false}
+                    />
+                </div>
+                
+                <button onClick={reset}>Reset</button>
+                <button onClick={onFlip}>Flip</button>
+            </div>
+            
+        );
+    }
+
+    function App() {
+        const [index, setIndex] = React.useState("xx");
+        const onSelect = (event) => {
+            //console.log(event.target.value);
+            setIndex(event.target.value);
+        };
+
+        return (
+            <div>
+                <h1 className="hi">Super Converter</h1>
+                <select onChange={onSelect}>
+                    <option value="xx">Select Your Units</option>    
+                    <option value="0">Minutes & Hours</option>    
+                    <option value="1">Km & Miles</option>    
+                </select>
+                <hr />
+                {index === "xx" ? "Please Select Your Units" : null}
+                {index === "0" ? <MinutesToHours /> : null}
+                {index === "1" ? <KmToMiles /> : null}
+            </div>
+            
+        );
+    }
+    
+    ReactDOM.render(<App />, root);
+</script>
+```
+- 앞의 MinutesToHours와 동일하게 KmToMiles를 만든다.              
+- App에서 {index ~}문을 통해 option의 value가 xx, 0, 1일떄 출력되는 컴포넌트를 선택한다.          
+
+props.html
+
+```
+<script type="text/babel">
+    const root = document.getElementById("root");
+    function Btn(props) {
+        //console.log(props);
+        return (
+            <button
+                style={{
+                    backgroundColor : "tomato",
+                    color : "whtie",
+                    padding : "10px 20px",
+                    border : 0,
+                    borderRadius : 10,
+                }}
+            >
+                {props.banana}
+            </button>
+        )
+    }
+
+    function App() {
+        return (
+            <div>
+                <Btn banana="Save Changes" />
+                <Btn banana="Continue"/>
+            </div>
+        );
+    }
+    
+    ReactDOM.render(<App />, root);
+</script>
+```
+- props를 이용해 버튼 내용을 banana의 내용을 받아온다.               
+
+memo.html
+
+```
+<script type="text/babel">
+    const root = document.getElementById("root");
+    function Btn({ text, onClick, fontSize}) {
+        //console.log(props);
+        return (
+            <button
+                onClick={onClick}
+                style={{
+                    backgroundColor : "tomato",
+                    color : "whtie",
+                    padding : "10px 20px",
+                    border : 0,
+                    borderRadius : 10,
+                    fontSize
+                }}
+            >
+                {text}
+            </button>
+        )
+    }
+
+    const MemorizedBtn = React.memo(Btn);
+
+    MemorizedBtn.propTypes = {
+        text: PropTypes.string.isRequired,
+        fontSize: PropTypes.number,
+    };
+
+    function App() {
+        const [value, setValue] = React.useState("SaveChages");
+        const changeValue = () => setValue("Revert Chages");
+
+        return (
+            <div>
+                <MemorizedBtn text={value} onClick={changeValue} fontSize={18} />
+                <MemorizedBtn text="Continue" />
+            </div>
+        );
+    }
+    
+    ReactDOM.render(<App />, root);
+</script>
+```
+- props 기능을 이용해 fontSize, text 등을 추가한다.           
+- memo 기능을 사용하지 않으면 Continue 버튼은 변하지 않는데 계속 reRender가 된다.           
+- React.memo()를 이용하면 내용이 변하는 버튼만 reRender된다.             
+- PropType을 이용하면 propType. 뒤의 string이나 number 등 형식과 일치하지 않으면 에러가 발생한다.        
+- isRequired를 사용하면 값이 undefined일 경우 에러가 발생한다.         
+- 위의 코드에서 MemorizedBtn.propTypes의 fontSize에 .isRequired를 추가하게 되면 에러가 발생한다.       
